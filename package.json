@@ -4,7 +4,11 @@
   "type": "module",
   "scripts": {
     "test": "node tests/model.test.mjs",
-    "check:discovery": "node scripts/check-source-discovery.mjs"
-  }
+    "check:discovery": "node scripts/check-source-discovery.mjs",
+    "deploy:studionet": "tsx scripts/deploy-studionet.ts",
+    "prove:studionet": "tsx scripts/prove-studionet.ts",
+    "verify:deployment": "tsx scripts/verify-deployment.ts"
+  },
+  "dependencies": {"genlayer-js": "1.1.8"},
+  "devDependencies": {"@types/node": "25.9.3", "tsx": "4.19.2", "typescript": "5.9.3"}
 }
-

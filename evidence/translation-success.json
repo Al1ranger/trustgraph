@@ -1,0 +1,11 @@
+{
+  "commitment": "Translate the supplied release notice into Spanish while preserving all version numbers and links.",
+  "delivered": true,
+  "deadline_met": true,
+  "language": "Spanish",
+  "version_numbers_preserved": true,
+  "links_preserved": true,
+  "omitted_sections": [],
+  "communication": {"status_updates": "provided", "final_delivery": "provided"},
+  "integrity_incident": false
+}

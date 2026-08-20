@@ -1,0 +1,13 @@
+{
+  "commitment": "Deliver a security audit covering authentication and authorization controls.",
+  "delivered": true,
+  "deadline_met": true,
+  "scope": ["authentication", "authorization"],
+  "findings": [
+    {"id": "TG-01", "severity": "high", "area": "authorization", "remediation": "enforce object ownership before mutation"},
+    {"id": "TG-02", "severity": "medium", "area": "authentication", "remediation": "rotate sessions after privilege changes"}
+  ],
+  "quality_checks": {"reproduction_steps": true, "remediation_guidance": true, "unsupported_claims": false},
+  "communication": {"status_updates": "provided", "final_delivery": "provided"},
+  "integrity_incident": false
+}
