@@ -1,0 +1,10 @@
+{
+  "name": "trustgraph-genlayer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/model.test.mjs",
+    "check:discovery": "node scripts/check-source-discovery.mjs"
+  }
+}
+
