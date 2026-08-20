@@ -30,3 +30,6 @@ npm run check:discovery
 
 The repository intentionally contains exactly one `.py` file so automated GenVM source discovery cannot mistake test helpers for deployable contracts.
 
+## Live deployment
+
+The source-matched StudioNet deployment and three finalized behavioral proof scenarios are documented in [DEPLOYMENT_EVIDENCE.md](DEPLOYMENT_EVIDENCE.md).
