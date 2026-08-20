@@ -76,11 +76,12 @@ class TrustGraph(gl.Contract):
         cid = self._identifier(commitment_id, "commitment")
         if self.commitment_exists.get(cid, False):
             raise gl.vm.UserError("EXPECTED: commitment already exists")
-        if agent == gl.message.sender_address:
+        agent_address = Address(agent)
+        if agent_address == gl.message.sender_address:
             raise gl.vm.UserError("EXPECTED: counterparty must differ from agent")
         cap = self._capability(capability)
         self.commitments[cid] = Commitment(
-            agent=agent,
+            agent=agent_address,
             counterparty=gl.message.sender_address,
             capability=cap,
             promise=self._required(promise, "promise", MAX_TEXT),
@@ -395,4 +396,3 @@ class TrustGraph(gl.Contract):
     def _memory_key(self, agent: Address, capability: str) -> str:
         return hashlib.sha256(
             (str(agent) + "|" + capability).encode()).hexdigest()
-
